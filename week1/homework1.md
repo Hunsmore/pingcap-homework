@@ -9,7 +9,7 @@
 
 ## 题目描述
 
-本地下载 TiDB，TiKV，PD 源代码，改写源码并编译部署以下环 境:
+本地下载 TiDB，TiKV，PD 源代码，改写源码并编译部署以下环境:
 
 - 1 TiDB
 - 1 PD
@@ -17,7 +17,7 @@
 
 改写后
 
-- 使得 TiDB 启动事务时，会打一个 “hello transaction” 的 日志
+- 使得 TiDB 启动事务时，会打一个 “hello transaction” 的日志
 
 ## 第一步：源码编译
 

@@ -210,6 +210,7 @@ TPC-H 测试结果
 数据准备卡在 generating orders/lineitem tables 一步，无法运行测试。单机性能伤不起啊 ToT。
 
 ## 关键指标监控
+
 \*_说明: 因为在个人电脑的虚拟机中测试，稍大一点的测试集 prepare 就卡很久，所以测试的数据集都很小。_
 
 在运行 TPC-C 测试 20 min 后，Grafana 关键指标截图如下
@@ -227,11 +228,14 @@ TiKV-Details-gRPC 中的 Message count 和 message Duration：
 
 持续运行 TPC-C 查询，并在 TiDB Dashboard 中运行 TiDB Profiling。
 TPC-C 查询为：
+
 ```
 ./bin/go-tpc tpcc -H 127.0.0.1 -P 4000 -D tpcc --warehouses 1 run --threads=1
 ```
+
 TiDB Profile 结果为：
 ![Alt text](./profiling_tidb.svg)
 
-如图所示，除去 go runtime，最耗时的模块为 tikv (*RegionRequestSender)。
+如图所示，除去 go runtime，最耗时的模块为 tikv (\*RegionRequestSender)。
+
 \*_注：本人小白一枚，TiDB 模块和 Profiling 都不懂。如有错误，还望老师能不吝指正。_

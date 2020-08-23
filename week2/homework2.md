@@ -188,6 +188,7 @@ UPDATE - Takes(s): 14.1, Count: 62, OPS: 4.4, Avg(us): 840327, Min(us): 411571, 
 //准备
 ./bin/go-tpc tpcc -H 127.0.0.1 -P 4000 -D tpcc --warehouses 1 prepare
 ./bin/go-tpc tpch -H 127.0.0.1 -P 4000 -D tpch --sf 1 --analyze
+
 //测试
 ./bin/go-tpc tpcc -H 127.0.0.1 -P 4000 -D tpcc --warehouses 1 run --time=1m --threads=4
 ./bin/go-tpc tpch -H 127.0.0.1 -P 4000 -D tpch --sf 1

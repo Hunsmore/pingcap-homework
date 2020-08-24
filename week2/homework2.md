@@ -217,13 +217,13 @@ TPC-H 测试结果
 在运行 TPC-C 测试 20 min 后，Grafana 关键指标截图如下
 
 TiDB-Summary 中的 Duration 和 QPS：
-![Alt text](./tidb-summary.png)
+![tidb-summary](./tidb-summary.png)
 
 TiKV-Details-Cluster 中的 CPU 和 QPS：
-![Alt text](./tikv-details-cluster.png)
+![tikv-details-cluster](./tikv-details-cluster.png)
 
 TiKV-Details-gRPC 中的 Message count 和 message Duration：
-![Alt text](./tikv-details-grpc.png)
+![tikv-details-grpc](./tikv-details-grpc.png)
 
 ## 性能瓶颈分析
 
@@ -235,7 +235,7 @@ TPC-C 查询为：
 ```
 
 TiDB Profile 结果为：
-![Alt text](./profiling_tidb.svg)
+![profiling_tidb](./profiling_tidb.svg)
 
 如图所示，除去 go runtime，最耗时的模块为 tikv (\*RegionRequestSender)。
 
